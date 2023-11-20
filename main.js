@@ -6,6 +6,8 @@ const bounds = new Vec2(innerWidth, innerHeight);
 const mouseInstance = new Instance(null, 0);
 const instances = [mouseInstance];
 
+const $ = name => document.querySelector(name);
+
 
 function main() {
     canvas = document.querySelector('canvas');
@@ -14,8 +16,9 @@ function main() {
     [canvas.width, canvas.height] = bounds;
     requestAnimationFrame(render);
 
-    for(let i = 0; i < 5; ++i) {
-        const cls = Math.random() * 2 | 0;
+    for(let i = 0; i < 2; ++i) {
+        // const cls = Math.random() * 2 | 0;
+        const cls = 1;
         const instance = new Instance(null, cls);
         instances.push(instance);
     }
